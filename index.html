@@ -1,289 +1,1194 @@
+
+I'll create a new, comprehensive portfolio page that combines your existing design with the simplified certification section you provided. Here's the complete code:
+
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio - Mohamed Jiyath</title>
-    <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #eef2f5;
-            color: #333;
-            line-height: 1.6;
-        }
-
-        /* Hero Section */
-        header {
-            background: url('https://github.com/jiyathart/PORTFOLIO/blob/main/IMG-20241230-WA0003.jpg?raw=true') no-repeat center center/cover;
-            height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            color: #fff;
-            text-align: center;
-        }
-
-        header h1 {
-            font-size: 3rem;
-            margin: 0;
-            font-weight: 700;
-        }
-
-        header p {
-            font-size: 1.5rem;
-            margin-top: 10px;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 2rem;
-        }
-
-        /* Navigation */
-        nav {
-            background-color: #2c3e50;
-            color: white;
-            padding: 1rem 0;
-            text-align: center;
-        }
-
-        nav ul {
-            list-style: none;
-            margin: 0;
-            padding: 0;
-        }
-
-        nav ul li {
-            display: inline-block;
-            margin: 0 30px;
-        }
-
-        nav ul li a {
-            color: white;
-            font-size: 1.2rem;
-            text-decoration: none;
-            padding: 5px 0;
-            display: block;
-            transition: color 0.3s;
-        }
-
-        nav ul li a:hover {
-            color: #1abc9c;
-        }
-
-        /* Section Styles */
-        section {
-            margin-top: 2rem;
-            padding: 4rem 2rem;
-            background-color: #fff;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease-in-out;
-        }
-
-        section:hover {
-            transform: translateY(-10px);
-        }
-
-        section h2 {
-            font-size: 2.5rem;
-            color: #2c3e50;
-        }
-
-        section p, section ul {
-            font-size: 1.1rem;
-        }
-
-        .section-content {
-            max-width: 900px;
-            margin: 0 auto;
-            text-align: center;
-        }
-
-        ul {
-            list-style-type: none;
-            padding: 0;
-        }
-
-        ul li {
-            margin: 8px 0;
-            text-align: left;
-        }
-
-        .download-button {
-            display: inline-block;
-            background-color: #2c3e50;
-            color: white;
-            padding: 12px 24px;
-            border-radius: 30px;
-            text-decoration: none;
-            margin-top: 20px;
-            transition: background-color 0.3s;
-        }
-
-        .download-button:hover {
-            background-color: #1abc9c;
-        }
-
-        footer {
-            background-color: #34495e;
-            color: #fff;
-            text-align: center;
-            padding: 20px;
-            margin-top: 2rem;
-        }
-
-        footer p {
-            margin: 0;
-            font-size: 1rem;
-        }
-
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            header h1 {
-                font-size: 2.5rem;
-            }
-
-            header p {
-                font-size: 1.2rem;
-            }
-
-            nav ul li {
-                display: block;
-                margin-bottom: 10px;
-            }
-
-            .container {
-                padding: 1rem;
-            }
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Professional portfolio of Mohamed Jiyath, Computer Science student and IT professional">
+  <meta name="keywords" content="portfolio, computer science, web development, data entry, system administration">
+  <title>MOHAMED JIYATH | Computer Science Professional</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    :root {
+      --primary-color: #2c3e50;
+      --secondary-color: #1abc9c;
+      --accent-color: #3498db;
+      --light-color: #ecf0f1;
+      --dark-color: #2c3e50;
+      --text-color: #333;
+      --text-light: #7f8c8d;
+      --white: #fff;
+      --shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      --transition: all 0.3s ease-in-out;
+    }
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      color: var(--text-color);
+      background-color: var(--light-color);
+      overflow-x: hidden;
+    }
+    
+    a {
+      text-decoration: none;
+      color: var(--primary-color);
+      transition: var(--transition);
+    }
+    
+    a:hover {
+      color: var(--secondary-color);
+    }
+    
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+    
+    .section {
+      padding: 80px 0;
+    }
+    
+    .section-title {
+      text-align: center;
+      margin-bottom: 50px;
+      position: relative;
+    }
+    
+    .section-title h2 {
+      font-size: 2.5rem;
+      color: var(--primary-color);
+      text-transform: uppercase;
+      margin-bottom: 15px;
+    }
+    
+    .section-title::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 80px;
+      height: 3px;
+      background: var(--secondary-color);
+    }
+    
+    .btn {
+      display: inline-block;
+      padding: 12px 30px;
+      background: var(--primary-color);
+      color: var(--white);
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: var(--transition);
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-size: 0.9rem;
+    }
+    
+    .btn:hover {
+      background: var(--secondary-color);
+      color: var(--white);
+      transform: translateY(-3px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    }
+    
+    .btn i {
+      margin-left: 5px;
+    }
+    
+    /* Header */
+    header {
+      height: 100vh;
+      background: linear-gradient(rgba(44, 62, 80, 0.8), rgba(26, 188, 156, 0.8)), 
+                  url('https://github.com/jiyathart/PORTFOLIO/blob/main/IMG-20241230-WA0003.jpg?raw=true') no-repeat center center/cover;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: var(--white);
+      position: relative;
+    }
+    
+    .header-content h1 {
+      font-size: 4rem;
+      margin-bottom: 20px;
+      animation: fadeInDown 1s ease;
+    }
+    
+    .header-content p {
+      font-size: 1.5rem;
+      margin-bottom: 30px;
+      animation: fadeInUp 1s ease;
+    }
+    
+    .social-links {
+      display: flex;
+      justify-content: center;
+      margin-top: 30px;
+    }
+    
+    .social-links a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      background: rgba(255, 255, 255, 0.2);
+      border-radius: 50%;
+      margin: 0 10px;
+      color: var(--white);
+      transition: var(--transition);
+    }
+    
+    .social-links a:hover {
+      background: var(--white);
+      color: var(--primary-color);
+      transform: translateY(-5px);
+    }
+    
+    .scroll-down {
+      position: absolute;
+      bottom: 30px;
+      left: 50%;
+      transform: translateX(-50%);
+      color: var(--white);
+      animation: bounce 2s infinite;
+    }
+    
+    /* Navigation */
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: var(--white);
+      box-shadow: var(--shadow);
+      z-index: 1000;
+      transition: var(--transition);
+    }
+    
+    nav.scrolled {
+      background: rgba(255, 255, 255, 0.95);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
+    
+    .nav-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 0;
+    }
+    
+    .logo {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--primary-color);
+    }
+    
+    .nav-links {
+      display: flex;
+      list-style: none;
+    }
+    
+    .nav-links li {
+      margin-left: 30px;
+    }
+    
+    .nav-links a {
+      color: var(--primary-color);
+      font-weight: 600;
+      position: relative;
+      padding: 5px 0;
+    }
+    
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: var(--secondary-color);
+      transition: var(--transition);
+    }
+    
+    .nav-links a:hover::after {
+      width: 100%;
+    }
+    
+    .hamburger {
+      display: none;
+      cursor: pointer;
+    }
+    
+    /* About Section */
+    #about {
+      background: var(--white);
+    }
+    
+    .about-content {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    
+    .about-img {
+      flex: 1;
+      min-width: 300px;
+      padding: 20px;
+    }
+    
+    .about-img img {
+      width: 100%;
+      border-radius: 10px;
+      box-shadow: var(--shadow);
+    }
+    
+    .about-text {
+      flex: 1;
+      min-width: 300px;
+      padding: 20px;
+    }
+    
+    .about-text h3 {
+      font-size: 1.8rem;
+      margin-bottom: 20px;
+      color: var(--primary-color);
+    }
+    
+    .about-text p {
+      margin-bottom: 15px;
+      color: var(--text-light);
+    }
+    
+    .info-list {
+      margin-top: 30px;
+    }
+    
+    .info-list li {
+      margin-bottom: 15px;
+      display: flex;
+      align-items: center;
+    }
+    
+    .info-list i {
+      margin-right: 10px;
+      color: var(--secondary-color);
+      font-size: 1.2rem;
+    }
+    
+    /* Skills Section */
+    #skills {
+      background: #f8f9fa;
+    }
+    
+    .skills-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+    }
+    
+    .skill-category {
+      background: var(--white);
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: var(--shadow);
+      transition: var(--transition);
+    }
+    
+    .skill-category:hover {
+      transform: translateY(-10px);
+    }
+    
+    .skill-category h3 {
+      font-size: 1.5rem;
+      margin-bottom: 20px;
+      color: var(--primary-color);
+      text-align: center;
+    }
+    
+    .skill-item {
+      margin-bottom: 15px;
+    }
+    
+    .skill-name {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 5px;
+    }
+    
+    .skill-bar {
+      height: 10px;
+      background: #e0e0e0;
+      border-radius: 5px;
+      overflow: hidden;
+    }
+    
+    .skill-progress {
+      height: 100%;
+      background: var(--secondary-color);
+      border-radius: 5px;
+    }
+    
+    /* Experience Section */
+    #experience {
+      background: var(--white);
+    }
+    
+    .timeline {
+      position: relative;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 40px 0;
+    }
+    
+    .timeline::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 50%;
+      width: 2px;
+      height: 100%;
+      background: var(--secondary-color);
+      transform: translateX(-50%);
+    }
+    
+    .timeline-item {
+      position: relative;
+      margin-bottom: 50px;
+    }
+    
+    .timeline-item:nth-child(odd) {
+      padding-right: 50%;
+      text-align: right;
+    }
+    
+    .timeline-item:nth-child(even) {
+      padding-left: 50%;
+      text-align: left;
+    }
+    
+    .timeline-dot {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      width: 20px;
+      height: 20px;
+      background: var(--white);
+      border: 4px solid var(--secondary-color);
+      border-radius: 50%;
+      transform: translateX(-50%);
+    }
+    
+    .timeline-date {
+      font-weight: 600;
+      color: var(--secondary-color);
+      margin-bottom: 10px;
+    }
+    
+    .timeline-content {
+      background: #f8f9fa;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: var(--shadow);
+    }
+    
+    .timeline-content h3 {
+      font-size: 1.3rem;
+      margin-bottom: 10px;
+      color: var(--primary-color);
+    }
+    
+    .timeline-content h4 {
+      font-size: 1rem;
+      margin-bottom: 10px;
+      color: var(--accent-color);
+    }
+    
+    .timeline-content ul {
+      padding-left: 20px;
+    }
+    
+    .timeline-content li {
+      margin-bottom: 5px;
+    }
+    
+    /* Projects Section */
+    #projects {
+      background: #f8f9fa;
+    }
+    
+    .projects-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+    }
+    
+    .project-card {
+      background: var(--white);
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      transition: var(--transition);
+    }
+    
+    .project-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    }
+    
+    .project-img {
+      height: 200px;
+      overflow: hidden;
+    }
+    
+    .project-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: var(--transition);
+    }
+    
+    .project-card:hover .project-img img {
+      transform: scale(1.1);
+    }
+    
+    .project-info {
+      padding: 20px;
+    }
+    
+    .project-info h3 {
+      font-size: 1.3rem;
+      margin-bottom: 10px;
+      color: var(--primary-color);
+    }
+    
+    .project-info p {
+      color: var(--text-light);
+      margin-bottom: 15px;
+    }
+    
+    .project-links {
+      display: flex;
+    }
+    
+    .project-links a {
+      display: inline-flex;
+      align-items: center;
+      margin-right: 15px;
+      font-size: 0.9rem;
+      color: var(--accent-color);
+    }
+    
+    .project-links a i {
+      margin-right: 5px;
+    }
+    
+    /* Certifications Section */
+    #certifications {
+      background: var(--white);
+    }
+    
+    .certifications-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+    }
+    
+    .certification-card {
+      background: var(--white);
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      transition: var(--transition);
+      border: 1px solid #eee;
+    }
+    
+    .certification-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    }
+    
+    .certification-header {
+      background: var(--primary-color);
+      color: var(--white);
+      padding: 15px;
+      text-align: center;
+    }
+    
+    .certification-header h3 {
+      font-size: 1.2rem;
+      margin-bottom: 5px;
+    }
+    
+    .certification-header p {
+      font-size: 0.9rem;
+      opacity: 0.9;
+    }
+    
+    .certification-body {
+      padding: 20px;
+    }
+    
+    .certification-body p {
+      margin-bottom: 10px;
+      color: var(--text-light);
+    }
+    
+    .certification-footer {
+      padding: 0 20px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    .certification-date {
+      font-size: 0.9rem;
+      color: var(--text-light);
+    }
+    
+    .certification-link {
+      color: var(--accent-color);
+      font-size: 0.9rem;
+      font-weight: 600;
+    }
+    
+    /* All Certificates Section */
+    .all-certificates {
+      max-width: 800px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    
+    .all-certificates-card {
+      background: var(--white);
+      border-radius: 10px;
+      padding: 30px;
+      box-shadow: var(--shadow);
+      margin-bottom: 40px;
+    }
+    
+    .all-certificates-card h3 {
+      font-size: 1.8rem;
+      margin-bottom: 20px;
+      color: var(--primary-color);
+    }
+    
+    .all-certificates-card p {
+      margin-bottom: 20px;
+      color: var(--text-light);
+    }
+    
+    /* Contact Section */
+    #contact {
+      background: var(--white);
+    }
+    
+    .contact-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+    }
+    
+    .contact-info {
+      flex: 1;
+      min-width: 300px;
+    }
+    
+    .contact-info h3 {
+      font-size: 1.5rem;
+      margin-bottom: 20px;
+      color: var(--primary-color);
+    }
+    
+    .contact-info p {
+      margin-bottom: 30px;
+      color: var(--text-light);
+    }
+    
+    .contact-details {
+      margin-bottom: 30px;
+    }
+    
+    .contact-item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 15px;
+    }
+    
+    .contact-item i {
+      width: 40px;
+      height: 40px;
+      background: var(--secondary-color);
+      color: var(--white);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 15px;
+    }
+    
+    .contact-form {
+      flex: 1;
+      min-width: 300px;
+    }
+    
+    .form-group {
+      margin-bottom: 20px;
+    }
+    
+    .form-control {
+      width: 100%;
+      padding: 12px 15px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      font-family: inherit;
+      transition: var(--transition);
+    }
+    
+    .form-control:focus {
+      outline: none;
+      border-color: var(--secondary-color);
+      box-shadow: 0 0 0 3px rgba(26, 188, 156, 0.2);
+    }
+    
+    textarea.form-control {
+      min-height: 150px;
+      resize: vertical;
+    }
+    
+    /* Footer */
+    footer {
+      background: var(--primary-color);
+      color: var(--white);
+      text-align: center;
+      padding: 30px 0;
+    }
+    
+    .footer-content {
+      margin-bottom: 20px;
+    }
+    
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      list-style: none;
+      margin-bottom: 20px;
+    }
+    
+    .footer-links li {
+      margin: 0 15px;
+    }
+    
+    .footer-links a {
+      color: var(--white);
+    }
+    
+    .footer-links a:hover {
+      color: var(--secondary-color);
+    }
+    
+    .copyright {
+      color: rgba(255, 255, 255, 0.7);
+      font-size: 0.9rem;
+    }
+    
+    /* Animations */
+    @keyframes fadeInDown {
+      from {
+        opacity: 0;
+        transform: translateY(-30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    
+    @keyframes bounce {
+      0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0) translateX(-50%);
+      }
+      40% {
+        transform: translateY(-20px) translateX(-50%);
+      }
+      60% {
+        transform: translateY(-10px) translateX(-50%);
+      }
+    }
+    
+    /* Responsive */
+    @media (max-width: 992px) {
+      .header-content h1 {
+        font-size: 3rem;
+      }
+      
+      .header-content p {
+        font-size: 1.2rem;
+      }
+      
+      .timeline::before {
+        left: 30px;
+      }
+      
+      .timeline-item:nth-child(odd),
+      .timeline-item:nth-child(even) {
+        padding-left: 80px;
+        padding-right: 0;
+        text-align: left;
+      }
+      
+      .timeline-dot {
+        left: 30px;
+      }
+    }
+    
+    @media (max-width: 768px) {
+      .nav-links {
+        position: fixed;
+        top: 80px;
+        left: -100%;
+        width: 100%;
+        height: calc(100vh - 80px);
+        background: var(--white);
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        transition: var(--transition);
+      }
+      
+      .nav-links.active {
+        left: 0;
+      }
+      
+      .nav-links li {
+        margin: 15px 0;
+      }
+      
+      .hamburger {
+        display: block;
+      }
+      
+      .header-content h1 {
+        font-size: 2.5rem;
+      }
+      
+      .section-title h2 {
+        font-size: 2rem;
+      }
+    }
+    
+    @media (max-width: 576px) {
+      .header-content h1 {
+        font-size: 2rem;
+      }
+      
+      .header-content p {
+        font-size: 1rem;
+      }
+      
+      .btn {
+        padding: 10px 20px;
+        font-size: 0.8rem;
+      }
+      
+      .section {
+        padding: 60px 0;
+      }
+    }
+  </style>
 </head>
 <body>
-
-    <!-- Hero Section -->
-    <header>
-        <div>
-            <h1>Mohamed Jiyath</h1>
-            <p>Computer Science Student | Bsc at Bharathidasan University</p>
-        </div>
-    </header>
-
-    <!-- Navigation Bar -->
-    <nav>
-        <ul>
-            <li><a href="#about">About</a></li>
-            <li><a href="#education">Education</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#technologies">Technologies</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#resume">Resume</a></li>
-        </ul>
-    </nav>
-
-    <!-- About Section -->
-    <section id="about">
-        <div class="container section-content">
-            <h2>About Me</h2>
-            <p>Hello! I'm Mohamed Jiyath, a passionate Computer Applications student currently pursuing my Bachelor of Computer Applications (Bsc) at Bharathidasan University. With a strong interest in technology and programming, I strive to build a solid foundation in computer science principles and practical skills that will help me make a meaningful impact in the tech world.</p>
-            <p>I'm committed to continuous learning, collaborating with others, and applying my skills to real-world challenges. My interests include web development, AI, and software development, and I aim to contribute positively to the world through technology.</p>
-        </div>
-    </section>
-
-    <!-- Education Section -->
-    <section id="education">
-        <div class="container section-content">
-            <h2>Education</h2>
-            <p>Bachelor of Computer Applications (BCA), Bharathidasan University (Expected Graduation: 2026)</p>
-        </div>
-    </section>
-
-    <!-- Skills Section -->
-    <section id="skills">
-        <div class="container section-content">
-            <h2>Skills</h2>
-            <ul>
-                <li>Cybersecurity</li>
-                <li>Data Science</li>
-                <li>Adobe Photoshop</li>
-                <li>Microsoft Office Suite</li>
-                <li>Python</li>
-                <li>Java</li>
-                <li>PHP</li>
-                <li>C++</li>
-                <li>Artificial Intelligence</li>
-                <li>JavaScript</li>
-            </ul>
-        </div>
-    </section>
-
-    <!-- Technologies Section -->
-    <section id="technologies">
-        <div class="container section-content">
-            <h2>Technologies I Use</h2>
-            <ul>
-                <li>Data analyze</li>
-                <li>AI Expert</li>
-                <li>Data analyze</li>
-                <li>MySQL, MongoDB</li>
-                <li>Git & GitHub</li>
-                <li>Machine Learning & AI frameworks</li>
-            </ul>
-        </div>
-    </section>
-
-    <!-- Projects Section -->
-    <section id="projects">
-        <div class="container section-content">
-            <h2>Projects</h2>
-            <ul>
-                <li><a href="https://github.com/jiyathart/PORTFOLIO.git" target="_blank">Digital Portfolio (HTML, CSS)</a></li>
-                <li><a href="https://haashiyaairtravels.com" target="_blank">Haashiya Air Travels Website</a></li>
-            </ul>
-        </div>
-    </section>
-
-    <!-- Resume Section -->
-    <section id="resume">
-        <div class="container section-content" style="text-align: center;">
-            <h2>Resume</h2>
-            <a href="https://github.com/jiyathart/PORTFOLIO/blob/main/Professional%20Modern%20CV%20Resume%20(3).pdf" target="_blank" class="download-button">Download CV</a>
-        </div>
-    </section>
-<!-- Certificate Section -->
-<section id="certificate">
-    <div class="container section-content">
-        <h2>Certificates</h2>
-        <p>You can view all my certifications here:</p>
-        <a href="https://github.com/jiyathart/PORTFOLIO/blob/main/all%20cretificate.pdf" 
-           target="_blank" class="download-button">
-           View Certificates
-        </a>
+  <!-- Navigation -->
+  <nav id="navbar">
+    <div class="container nav-container">
+      <a href="#" class="logo">JIYATH</a>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#certifications">Certifications</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <div class="hamburger">
+        <i class="fas fa-bars"></i>
+      </div>
     </div>
-</section>
-    <!-- Smooth Scrolling Script -->
-    <script>
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault();
-                const targetId = this.getAttribute('href').substring(1);
-                const targetElement = document.getElementById(targetId);
-                if (targetElement) {
-                    window.scrollTo({
-                        top: targetElement.offsetTop - 20,
-                        behavior: 'smooth'
-                    });
-                }
-            });
-        });
-    </script>
-</body>
-</html>
-<!-- Footer Section -->
-<footer>
-    <p>&copy; 2025 Mohamed Jiyath. All Rights Reserved.</p>
-</footer>
+  </nav>
 
+  <!-- Header -->
+  <header id="home">
+    <div class="header-content">
+      <h1>Mohamed Jiyath</h1>
+      <p>Computer Science Student | BSc at Bharathidasan University</p>
+      <a href="#about" class="btn">Explore More <i class="fas fa-arrow-down"></i></a>
+    </div>
+    <div class="social-links">
+      <a href="#"><i class="fab fa-github"></i></a>
+      <a href="#"><i class="fab fa-linkedin"></i></a>
+      <a href="#"><i class="fab fa-twitter"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+    </div>
+    <a href="#about" class="scroll-down">
+      <i class="fas fa-chevron-down"></i>
+    </a>
+  </header>
+
+  <!-- About Section -->
+  <section id="about" class="section">
+    <div class="container">
+      <div class="section-title">
+        <h2>About Me</h2>
+        <p>Get to know me better</p>
+      </div>
+      <div class="about-content">
+        <div class="about-img">
+          <img src="https://github.com/jiyathart/PORTFOLIO/blob/main/IMG-20241230-WA0003.jpg?raw=true" alt="Mohamed Jiyath">
+        </div>
+        <div class="about-text">
+          <h3>Computer Science Student & IT Professional</h3>
+          <p>Motivated and detail-oriented Computer Science undergraduate with hands-on experience in data entry, system analysis, and administrative support. Adept in Microsoft Office tools, Python programming, and project coordination.</p>
+          <p>Seeking to leverage technical and administrative skills in a dynamic organization where I can contribute to innovative projects while continuing to develop my expertise in computer science and information technology.</p>
+          <ul class="info-list">
+            <li>
+              <i class="fas fa-user"></i>
+              <strong>Name:</strong> Mohamed Jiyath
+            </li>
+            <li>
+              <i class="fas fa-map-marker-alt"></i>
+              <strong>Location:</strong> Pudukkottai, Tamil Nadu, India
+            </li>
+            <li>
+              <i class="fas fa-envelope"></i>
+              <strong>Email:</strong> jiyathart@gmail.com
+            </li>
+            <li>
+              <i class="fas fa-phone"></i>
+              <strong>Phone:</strong> +91 63848 67188
+            </li>
+          </ul>
+          <a href="#contact" class="btn">Contact Me</a>
+          <a href="https://github.com/jiyathart/PORTFOLIO/blob/7dc4e161f1407cb4d7387334a212888d0eeb9255/CURRICULUM%20VITAE%20MOHAMED%20JIYATH.pdf?raw=true" class="btn" target="_blank">View Resume</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" class="section">
+    <div class="container">
+      <div class="section-title">
+        <h2>My Skills</h2>
+        <p>What I bring to the table</p>
+      </div>
+      <div class="skills-container">
+        <div class="skill-category">
+          <h3>Technical Skills</h3>
+          <div class="skill-item">
+            <div class="skill-name">
+              <span>Python Programming</span>
+              <span>85%</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-progress" style="width: 85%"></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-name">
+              <span>Data Entry & Analysis</span>
+              <span>90%</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-progress" style="width: 90%"></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-name">
+              <span>System Administration</span>
+              <span>80%</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-progress" style="width: 80%"></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-name">
+              <span>Web Development</span>
+              <span>75%</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-progress" style="width: 75%"></div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="skill-category">
+          <h3>Professional Skills</h3>
+          <div class="skill-item">
+            <div class="skill-name">
+              <span>Project Management</span>
+              <span>85%</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-progress" style="width: 85%"></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-name">
+              <span>Team Leadership</span>
+              <span>90%</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-progress" style="width: 90%"></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-name">
+              <span>Client Relations</span>
+              <span>88%</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-progress" style="width: 88%"></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-name">
+              <span>Problem Solving</span>
+              <span>92%</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-progress" style="width: 92%"></div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="skill-category">
+          <h3>Tools & Technologies</h3>
+          <div class="skill-item">
+            <div class="skill-name">
+              <span>Microsoft Office</span>
+              <span>95%</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-progress" style="width: 95%"></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-name">
+              <span>MySQL/MongoDB</span>
+              <span>80%</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-progress" style="width: 80%"></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-name">
+              <span>Git & GitHub</span>
+              <span>75%</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-progress" style="width: 75%"></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-name">
+              <span>Photoshop</span>
+              <span>70%</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-progress" style="width: 70%"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience Section -->
+  <section id="experience" class="section">
+    <div class="container">
+      <div class="section-title">
+        <h2>My Experience</h2>
+        <p>Professional journey so far</p>
+      </div>
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-date">2025 - Present</div>
+          <div class="timeline-content">
+            <h3>Haashiya Air Travels</h3>
+            <h4>Manager & Senior Executive</h4>
+            <ul>
+              <li>Oversee daily office operations and ensure smooth workflow across departments</li>
+              <li>Maintain internal servers and troubleshoot technical issues</li>
+              <li>Manage bookings, customer interactions, and team supervision</li>
+            </ul>
+          </div>
+        </div>
+        
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-date">2024</div>
+          <div class="timeline-content">
+            <h3>Vidcom Business Solution Pvt Ltd.</h3>
+            <h4>Territory Sales Manager</h4>
+            <ul>
+              <li>Led regional sales strategy and exceeded monthly targets</li>
+              <li>Developed strong client relationships and closed high-value deals</li>
+              <li>Presented product solutions and coordinated marketing efforts</li>
+            </ul>
+          </div>
+        </div>
+        
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-date">2024 - 2025</div>
+          <div class="timeline-content">
+            <h3>Haashiya CSC & Travels</h3>
+            <h4>Data Entry Specialist</h4>
+            <ul>
+              <li>Managed customer records and digital service support</li>
+              <li>Updated databases and ensured data accuracy</li>
+              <li>Handled client documentation and online form submissions</li>
+            </ul>
+          </div>
+        </div>
+        
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-date">2023 - 2024</div>
+          <div class="timeline-content">
+            <h3>Haashiya Common Service Center</h3>
+            <h4>Data Entry Operator</h4>
+            <ul>
+              <li>Performed data verification and entry for official services</li>
+              <li>Assisted with administrative coordination and client services</li>
+              <li>Organized files and supported e-governance tasks</li>
+            </ul>
+          </div>
+        </div>
+        
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-date">2015 - 2017</div>
+          <div class="timeline-content">
+            <h3>PSN Engineering College</h3>
+            <h4>Office Administrator</h4>
+            <ul>
+              <li>Maintained academic records and student registration documents</li>
+              <li>Organized institutional events and facilitated communication between departments</li>
+              <li>Handled general correspondence and office scheduling</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="section">
+    <div class="container">
+      <div class="section-title">
+        <h2>My Projects</h2>
+        <p>Some of my recent work</p>
+      </div>
+      <div class="projects-container">
+        <div class="project-card">
+          <div class="project-img">
+            <img src="https://via.placeholder.com/600x400?text=Portfolio+Project" alt="Portfolio Project">
+          </div>
+          <div class="project-info">
+            <h3>Digital Portfolio</h3>
+            <p>A responsive personal portfolio website built with HTML, CSS, and JavaScript to showcase my skills and projects.</p>
+            <div class="project-links">
+              <a href="https://github.com/jiyathart/PORTFOLIO.git" target="_blank"><i class="fab fa-github"></i> Code</a>
+              <a href="#" target="_blank"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="project-card">
+          <div class="project-img">
+            <img src="https://via.placeholder.com/600x400?text=Travel+Website" alt="Travel Website">
+          </div>
+          <div class="project-info">
+            <h3>Haashiya Air Travels Website</h3>
+            <p>A commercial website for Haashiya Air Travels company providing flight booking and travel services.</p>
+            <div class="project-links">
+              <a href="https://haashiyaairtravels.com" target="_blank"><i class="fas fa-external-link-alt"></i> Visit Site</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="project-card">
+          <div class="project-img">
+            <img src="https://via.placeholder.com/600x400?text=Python+Project" alt="Python Project">
+          </div>
+          <div class="project-info">
+            <h3>Python Data Analysis Tool</h3>
+            <p>A Python application for data analysis and visualization using Pandas and Matplotlib libraries.</p>
+            <div class="project-links">
+              <a href="#" target="_blank"><i class="fab fa-github"></i> Code</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Certifications Section -->
+  <section id="certifications" class="section">
+    <div class="container">
+      <div class="section-title">
+        <h2>My Certifications</h2>
+        <p>Professional achievements and qualifications</p>
+      </div>
+      
+      <div class="all-certificates">
+        <div class="all-certificates-card">
+          <h3>All Certificates</h3>
+          <p>This document includes all my professional certifications in AI, Python, Web Development, and more from Infosys, IBM, and other institutions.</p>
+          <a href="https://github.com/jiyathart/PORTFOLIO/blob/7dc4e161f1407cb4d7387334a212888d0eeb9255/ALL%20CERTIFICATE.pdf?raw=true" class="certification-link" target="_blank">View All Certificates</a>
+        </div>
+      </div>
+      
+      <div class="certifications-container">
+        <!-- Infosys Certificates -->
+        <div class="certification-card">
+          <div class="certification-header">
+            <h3>Young Python Professional</h3>
+            <p>Infosys | Springboard</p>
+          </div>
+          <div class="certification-body">
+            <p>Successfully completed the comprehensive Python programming program covering advanced concepts and practical applications.</p>
+          </div>
+          <div class="certification-footer">
+            <span class="certification-date">Issued: Oct
